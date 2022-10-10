@@ -1,6 +1,9 @@
-import Expenses from "./compenents/Expenses";
-function App() {
-  const expenses = [
+import React from 'react';
+import { useState } from 'react';
+import Expenses from "./compenents/Expenses/Expenses";
+import NewExpense from './compenents/NewExpense/NewExpense';
+
+const DUMMY_EXPENSES = [
     {
       id: "e1",
       title: "Toilet Paper",
@@ -22,9 +25,19 @@ function App() {
     },
   ];
 
+function App() {
+ 
+    const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
+  function addExpenseHandler(expense){
+    setExpenses((prevExpenses)=>{
+        return [expense, ...prevExpenses]
+    })
+  }
+
   return (
     <div>
-        <h1>Expense Tracker</h1>
+      <NewExpense onAddExpense={addExpenseHandler} />  
       <Expenses items={expenses} />
     </div>
   );
