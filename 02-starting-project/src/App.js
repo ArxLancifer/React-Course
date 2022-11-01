@@ -13,11 +13,11 @@ const App = () => {
   const addGoalHandler = enteredText => {
     setCourseGoals(prevGoals => {
       const updatedGoals = [...prevGoals];
-      updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
+      updatedGoals.unshift({ text: enteredText, id: Math.random() });
       return updatedGoals;
     });
   };
-  
+
   const deleteItemHandler = goalId => {
     setCourseGoals(prevGoals => {
       const updatedGoals = prevGoals.filter(goal => goal.id !== goalId);
@@ -34,7 +34,7 @@ const App = () => {
       <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} />
     );
   }
-
+  
   return (
     <div>
       <section id="goal-form">
@@ -42,13 +42,6 @@ const App = () => {
       </section>
       <section id="goals">
         {content}
-        {/* {courseGoals.length > 0 && (
-          <CourseGoalList
-            items={courseGoals}
-            onDeleteItem={deleteItemHandler}
-          />
-        ) // <p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
-        } */}
       </section>
     </div>
   );
