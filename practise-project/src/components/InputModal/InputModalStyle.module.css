@@ -1,0 +1,36 @@
+.modal-container{
+    background-color: rgba(39, 39, 39, 0.8);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+}
+.modal-container div{
+   background-color: #fff;
+   border-radius: 5px;
+   width: 50%;
+   height: 15%;
+}
+
+.modal-container h2{
+    background-color: rgb(80, 0, 87);
+    border-radius:5px 5px 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 2%;
+}
+.modal-container button{
+    float: right;
+    margin: 2%;
+    padding: 1% 2%;
+    color: #fff;
+    border: unset;
+    background-color: rgb(80, 0, 87);
+}
+
+.modal-container button:hover{
+    background-color: rgb(112, 0, 122);
+}
