@@ -22,7 +22,8 @@ export const AutoContextProvider = (props) => {
     setIsLoggedIn(false);
   };
 
-  const loginHandler = () => {
+  const loginHandler = (email, password) => {
+    console.log(email, password)
     localStorage.setItem("isLoggedIn", "1");
     setIsLoggedIn(true);
   };
