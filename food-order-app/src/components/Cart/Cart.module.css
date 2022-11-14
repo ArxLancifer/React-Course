@@ -3,9 +3,11 @@
   margin: 0;
   padding: 0;
   max-height: 20rem;
-  overflow: auto;
+  overflow: scroll;
 }
-
+h4{
+    margin: 0 !important;
+}
 .total {
   display: flex;
   justify-content: space-between;
